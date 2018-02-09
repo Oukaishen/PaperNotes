@@ -1,3 +1,7 @@
+---
+mathjax: true
+---
+
 ## Generative Adversarial Nets Notes
 
 crseated by Kaishen, Feb 9, 2018
