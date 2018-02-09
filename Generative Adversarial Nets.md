@@ -1,5 +1,6 @@
-
-
+---
+mathjax:true
+---
 
 ## Generative Adversarial Nets Notes
 
