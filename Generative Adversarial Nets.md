@@ -1,4 +1,4 @@
-##Generative Adversarial Nets Notes
+##Generative Adversarial Nets Notes##
 
 created by Kaishen, Feb 9, 2018
 
@@ -6,7 +6,7 @@ created by Kaishen, Feb 9, 2018
 
 #### Questions
 
-1.Why we need to train the $D$ first before we train the $G$ ?
+1.Why we need to train the $D​$ first before we train the $G​$ ?
 
 >The reason is that 
 
