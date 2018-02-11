@@ -1,9 +1,8 @@
+##Generative Adversarial Nets Notes
 
+created by Kaishen, Feb 9, 2018
 
-
-## Generative Adversarial Nets Notes
-
-crseated by Kaishen, Feb 9, 2018
+#### Easy Understanding
 
 
 
@@ -13,7 +12,7 @@ crseated by Kaishen, Feb 9, 2018
 
 >The reason is that 
 
-![GAN-log(1-x)](/Users/kaishen/git_storage/PaperNotes/pictures/GAN-log(1-x).jpg)
+![GAN-log(1-x)](./pictures/GAN-log(1-x).jpg)
 
 
 
