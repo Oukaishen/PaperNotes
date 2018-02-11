@@ -2,7 +2,7 @@
 mathjax: true
 ---
 
-##Generative Adversarial Nets Notes
+## Generative Adversarial Nets Notes
 
 created by Kaishen, Feb 9, 2018
 
