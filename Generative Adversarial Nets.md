@@ -10,7 +10,7 @@ created by Kaishen, Feb 9, 2018
 
 In this part, I want to introduce the GAN to you without any detailed mathematics. 
 
-First of all, GAN, as stated in its name, is a generative model. You may ask, why we need generative model or what it can give us. Informally, generative model has the ability to create **"new samples"** that are similar to the origin sample. 
+First of all, GAN, as stated in its name, is a generative model. You may ask, why we need generative model or what it can give us. Informally, generative model has the ability to create **"new samples"** that are similar to the origin samples. 
 
 For example, in normal Machine Learning an Deep Learning scenario, we are often provided some samples and asked make a model to handle them. But what if the task changes to generate some similar samples based on the given sample? I.e. we need more pictures that similar to the CIFAR10. Then GAN can help.
 
@@ -20,9 +20,13 @@ How does GAN achieve this? The secret is also inside the name, **"Adversarial"**
 
 ![GAN two nn](./pictures/GAN two nn.png)
 
-The generator and the Discriminator are just like two players, who are competing with each other. This is the reason people call this kind of method Adversarial.
+The generator and the Discriminator are just like two players, who are competing with each other. This is the reason why people call this kind of method Adversarial.
 
 After training, both neural networks are good, then we will use the generator network to generate new images.
+
+#### Deep Understanding
+
+
 
 #### Questions
 
@@ -36,5 +40,5 @@ After training, both neural networks are good, then we will use the generator ne
 
 
 
-## References
+#### References
 
