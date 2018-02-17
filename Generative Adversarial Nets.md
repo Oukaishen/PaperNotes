@@ -12,7 +12,7 @@ In this part, I want to introduce the GAN to you without any detailed mathematic
 
 First of all, GAN, as stated in its name, is a generative model. You may ask, why we need generative model or what it can give us. Informally, generative model has the ability to create **"new samples"** that are similar to the origin samples. 
 
-For example, in normal Machine Learning an Deep Learning scenario, we are often provided some samples and asked make a model to handle them. But what if the task changes to generate some similar samples based on the given sample? I.e. we need more pictures that similar to the CIFAR10. Then GAN can help.
+For example, in normal Machine Learning an Deep Learning scenario, we are often provided some samples and asked make a model to handle them. But what if the task changes to generate some similar samples based on the given sample? I.e. we need more pictures that are similar to the CIFAR10. Then GAN can help.
 
 ***In short, GAN can generate something new based on the things you feed it.***
 
@@ -62,7 +62,7 @@ I would like to represent the data as $(x_i, y_i)$, where $i$ stands for the ith
 
 $D:\mathbb{R^n} \rightarrow [0,1]$ turn the input data into one scalar, the possibility that $x$ is from true distribution.
 
-In this way, we can consider the conditional possibility $\mathbb{P}(Y=y_i|x_i)$ as follows:
+In this way, we can consider the conditional possibility $\mathbb{P}\ (Y=y_i|x_i)$ as follows:
 
  $\mathbb{P}(Y=y_i|x_i)=D(x_i)^{y_i} \cdot (1-D(x_i))^{1-y_i}$
 
