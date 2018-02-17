@@ -64,9 +64,9 @@ $D:\mathbb{R^n} \rightarrow [0,1]$ turn the input data into one scalar, the poss
 
 In this way, we can consider the conditional possibility $P(Y=y_i|x_i)$ as follows:
 
- $P(Y=y_i|x_i)=D(x_i)^{y_i} \cdot (1-D(x_i))^{1-y_i}$
+$P(Y=y_i|x_i)=D(x_i)^{y_i} \cdot (1-D(x_i))^{1-y_i}$
 
-Since there is a minibatch of samples, including both the real data and the **generated** data from $z$ . 
+Since there is a minibatch of samples, including both the real data and the **generated** data from $z$ .
 
 $J=\frac{1}{2n}\prod\limits_{i=1}^{2n} P(Y=y_i|x_i)=\frac{1}{2n}\prod\limits_{i=1}^{2n} D(x_i)^{y_i} \cdot (1-D(x_i))^{1-y_i}$
 
