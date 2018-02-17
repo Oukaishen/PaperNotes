@@ -62,13 +62,13 @@ I would like to represent the data as $(x_i, y_i)$, where $i$ stands for the ith
 
 $D:\mathbb{R^n} \rightarrow [0,1]$ turn the input data into one scalar, the possibility that $x$ is from true distribution.
 
-In this way, we can consider the conditional possibility $P(Y=y_i|x_i)$ as follows:
+In this way, we can consider the conditional possibility $P(Y=y_i\vert x_i)$ as follows:
 
-$P(Y=y_i|x_i)=D(x_i)^{y_i} \cdot (1-D(x_i))^{1-y_i}$
+$P(Y=y_i\vert x_i)=D(x_i)^{y_i} \cdot (1-D(x_i))^{1-y_i}$
 
 Since there is a minibatch of samples, including both the real data and the **generated** data from $z$ .
 
-$J=\frac{1}{2n}\prod\limits_{i=1}^{2n} P(Y=y_i|x_i)=\frac{1}{2n}\prod\limits_{i=1}^{2n} D(x_i)^{y_i} \cdot (1-D(x_i))^{1-y_i}$
+$J=\frac{1}{2n}\prod\limits_{i=1}^{2n} P(Y=y_i\vert x_i)=\frac{1}{2n}\prod\limits_{i=1}^{2n} D(x_i)^{y_i} \cdot (1-D(x_i))^{1-y_i}$
 
 Taking $\log$ of two sides, 
 
@@ -92,7 +92,7 @@ $\log J=\sum\limits_{i=1}^{n}p_{data}[1\cdot\log(D(x_i)) + (1-1)\cdot\log(1-D(x_
 
 $\log J=\sum\limits_{i=1}^{n}p_{data}\log(D(x_i))+\sum\limits_{i=1}^{n}p_{g}\log(1-D(x_i))$
 
-$\log J = \mathbb{E}_{x\sim p_{data}}[\log D(x)]+\mathbb{E}_{z \sim p_z(z)}[\log (1-D(G(z)))]$
+$\log J = \mathbb{E}_{x\sim p_{data}}[\log D(x)]+\mathbb{E}_{z \sim p_z(z)}[\log (1-D(G(z)))]​$
 
 ---
 
