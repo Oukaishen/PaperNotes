@@ -92,7 +92,7 @@ $\log J=\sum\limits_{i=1}^{n}p_{data}[1\cdot\log(D(x_i)) + (1-1)\cdot\log(1-D(x_
 
 $\log J=\sum\limits_{i=1}^{n}p_{data}\log(D(x_i))+\sum\limits_{i=1}^{n}p_{g}\log(1-D(x_i))$
 
-$\log J = \mathbb{E}_{x \sim p_{data}}[\log D(x)] + \mathbb{E}_{z \sim p_z(z)}[\log(1-G(z))]$
+$\log J = E_{x \sim p_{data}}[\log D(x)] + E_{z \sim p_z(z)}[\log(1-G(z))]$
 
 If we maximize this $\log J$, we can get a good **discriminator**, on the other hand, if we minimize it, we obtain a good **generator**.
 
