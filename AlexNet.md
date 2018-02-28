@@ -8,7 +8,7 @@ kaishen, 28 Feb, 2018
 
 The original paper can be found [here](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf).
 
-If you are not familiar with CNN(Convolutional Neural Networks), or I forget it after sometime, please refer to this great [post](http://cs231n.github.io/convolutional-networks/). Or [here](./materials/CS231n CNN note.pdf), in case the former link is gone.
+If you are not familiar with CNN(Convolutional Neural Networks), or I forget it after sometime, please refer to this great [post](http://cs231n.github.io/convolutional-networks/). Or [here](https://github.com/Oukaishen/PaperNotes/blob/master/materials/CS231n%20CNN%20note.pdf), in case the former link is gone.
 
 The network architecture is shown below, I **acknowledge** that this picture is taken from Standford CS231n course.
 
