@@ -1,5 +1,5 @@
 ---
-mathjax:true
+mathjax: true
 ---
 
 # AlexNet
