@@ -16,14 +16,15 @@ The network architecture is shown below, I **acknowledge** that this picture is 
 
 *If you are confused by the first layer 224 shown in the original picture while the 227 listed in the schema, it turns out that the origianl author pad three lines of blank.*
 
-## Some Key points
+## Some Key Points
 
-1. The first paper demonstrates the CNN is good at picture classifications. Up to now(28 Feb 2018), it is referenced more than 20,000 times in google scholar.
-2. The first paper to demonstrate the ReLU(Rectified Linear Unit) is several times faster than the traditional non-linearities, such as sigmoid, tanh, etc.
+1.The first paper demonstrates the CNN is good at picture classifications. Up to now(28 Feb 2018), it is referenced more than 20,000 times in google scholar.
+
+2.The first paper to demonstrate the ReLU(Rectified Linear Unit) is several times faster than the traditional non-linearities, such as sigmoid, tanh, etc.
 
 ![Relu Pictures](./pictures/relu.png)
 
-3. Two method of Data Augumentations, details can be found in the paper. More importantly, how to understand this sentence?
+3.Two method of Data Augumentations, details can be found in the paper. More importantly, how to understand this sentence?
 
 > Without this scheme, our network suffers from substantial overfitting, which would have forced us to use much smaller networks.
 
@@ -37,8 +38,7 @@ For comparison, if you have 60M candidates for one job, without any doubt you ha
 
 Finally, come back to the above sentence by the author, if he cannot figure out a way to feed the model enough data, he would be forced to use samller networks. Similarly, if you are too lazy, you had better choose one from 60 candidates.
 
-4. Dropout, also reduce the overfitting effect. Quiter useful technique, not much to say.
-
+4.Dropout, also reduce the overfitting effect. Quiter useful technique, not much to say.
 
 5. > This initialization accelerates the early stages of learning by providing the ReLUs with postive inputs.
 
