@@ -32,8 +32,12 @@ Two advantages can be obtained by using a stack of three 3x3 filters compared to
 
 This first point is quite clear and no need to explain. Obviously, more non-linearities lead to larger function space.
 
-> Second, we decrease the number of parameters. 
+> Second, we decrease the number of parameters. (kaishen: without losing much ability of represent)
 
-The second point can be demonstrates quantitatively. Assuming that both the input and output of a three-layer 3x3 convolutions has **C** channels. Then the stack has $3 \times [C \times (3 \times 3 \times C)] = 27C^2$ parameters. On the other hand, the single 7x7 filter has $C \times (7 \times 7 \times C) = 49C^2$ parameters. The reduction ration is about 81%.
+The second point can be demonstrates quantitatively. Assuming that both the input and output of a three-layer 3x3 convolutions has **C** channels. Then the stack has $3 \times [C \times (3 \times 3 \times C)] = 27C^2$ parameters. On the other hand, the single 7x7 filter has $C \times (7 \times 7 \times C) = 49C^2$ parameters. The reduction ratio is about 81%.
 
-3.
+3.Training procedure of this deep neural network (16 and 19 layers).
+
+> To be noticed that, this VGG model is invented before the Batch Normalization technique comes out. So the training procedure is a little bit tricky. After BN comes out, some of those tricky techniques are no longer necessary. The Batch Normalization paper can be found [here](http://proceedings.mlr.press/v37/ioffe15.pdf).
+
+During the training of the VGG 16, the author actually trained the first 11 layers. After that is converged, it continued to train the thereafter layers.
