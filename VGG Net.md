@@ -41,3 +41,7 @@ The second point can be demonstrates quantitatively. Assuming that both the inpu
 > To be noticed that, this VGG model is invented before the Batch Normalization technique comes out. So the training procedure is a little bit tricky. After BN comes out, some of those tricky techniques are no longer necessary. The Batch Normalization paper can be found [here](http://proceedings.mlr.press/v37/ioffe15.pdf).
 
 During the training of the VGG 16, the author actually trained the first 11 layers. After that is converged, it continued to train the thereafter layers.
+
+4.Incorporation of 1x1 conv layers.
+
+> It is a way to increase the non-linearity of the decision function without afftecting the receptive field.
