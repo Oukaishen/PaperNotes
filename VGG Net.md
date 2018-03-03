@@ -45,3 +45,4 @@ During the training of the VGG 16, the author actually trained the first 11 laye
 4.Incorporation of 1x1 conv layers.
 
 > It is a way to increase the non-linearity of the decision function without afftecting the receptive field.
+
