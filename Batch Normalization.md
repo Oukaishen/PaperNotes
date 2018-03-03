@@ -75,9 +75,13 @@ If you want to check how [Ian Goodfellow](https://github.com/Oukaishen/NiuBiPeop
 
 If you want to check how CS231n describes BN, please check [here](https://www.youtube.com/watch?v=wEoyxE0GP2M&index=6&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv).
 
+---
+
 In the following discussion, I want to stick to [sigmoid](https://en.wikipedia.org/wiki/Sigmoid_function) activation function cause it may be clearer to show the saturation. Consider such a forward pass in a DNN(Deep Nerual Network)
 
 > affine1 -> BN1 -> sigmoid1 -> affine2 -> BN2 -> sigmoid2
+
+### point 1
 
 As shown in the pciture, the output of the affine1 layer may follow this distribution(just for illustration).
 
@@ -85,4 +89,33 @@ As shown in the pciture, the output of the affine1 layer may follow this distrib
 
 If this goes directly into the sigmoid1, obviously most of them will go into the saturation region of sigmoid. Later in the backward pass, those gradients will be zero, and lead to slowly training (aka gradient vanishing).
 
-On the other hand, with BN1, the output distribution is map to this. Initially, $\gamma$ is set to 1 while $\beta$ is set to 0, which is just an [unit gaussian distribution](https://en.wikipedia.org/wiki/Normal_distribution).
+On the other hand, with BN1, the output distribution is map to this distribution. Initially, $\gamma$ is set to 1 while $\beta$ is set to 0, which is just an [unit gaussian distribution](https://en.wikipedia.org/wiki/Normal_distribution).
+
+![]()
+
+Think in this way, BN provides a relatively "fixed" distribution for the layers in behind. For example, the $W2$ and $b2$ in the affine2 layer will take following as input. 
+
+$y_i = \gamma \hat x_i + \beta$
+
+$sigmoid(y_i)$
+
+ Here, the $\hat {x_i} \sim \mathcal {N}(0,1)$, if $\gamma$ and $\beta$ changes gradually and slowly, the $y_i$ distribution is stable. In this sense, the output of $sigmoid(y_i)$ is more stable, which means, **the $W2, b2$ dont have to readjust too much to compensate the change in the $W1, b1$**.  Although changes in $W1 , \ b1$ will change $x_i$ 's distribution, but $\hat{xi}$ remains the $\mathcal {N}(0,1)$, and $y_i$'s distribution is controlled by $\gamma$ and $\beta$. That means sigmoid1's input is quite stable, then $W2, b2$ need not always hugely readjust themselves to adapt another distribution. Think of there are many layers, this actually saves a lot effort. This somewhat seems like there is a barrier(||) to stop the changes in this layer to affect the next layer.
+
+> changes in affine1 -> || -> sigmoid1 -> changes in affine2 -> || -> sigmoid2
+
+### point 2
+
+In the backward pass, since most of the activation (sigmoid) is inside the linear region, the cases that gradient is zero are reduced. So BN can alleviate gradient vanishing problem. 
+
+### point 3
+
+> Batch Normalization also makes training more resilient to the parameter scale.
+
+This enables higher learning rates.
+
+### point 4
+
+$\gamma $ and $\beta$ can be learnd, this increase the model's flexibility and represent power
+
+
+
