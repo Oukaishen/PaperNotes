@@ -99,9 +99,9 @@ $y_i = \gamma \hat x_i + \beta$
 
 $sigmoid(y_i)$
 
- Here, the $\hat {x_i} \sim \mathcal {N}(0,1)$, if $\gamma$ and $\beta$ changes gradually and slowly, the $y_i$ distribution is stable. In this sense, the output of $sigmoid(y_i)$ is more stable, which means, **the $W2, b2$ dont have to readjust too much to compensate the change in the $W1, b1$**.  Although changes in $W1 , \ b1$ will change $x_i$ 's distribution, but $\hat{xi}$ remains the $\mathcal {N}(0,1)$, and $y_i$'s distribution is controlled by $\gamma$ and $\beta$. That means sigmoid1's input and output are quite stable, then $W2, b2$ need not always hugely readjust themselves to adapt another distribution. Think of there are many layers, this actually saves a lot effort. This somewhat seems like there is a barrier(||) to stop the changes in this layer to affect the next layer.
+ Here, the $\hat {x_i} \sim \mathcal {N}(0,1)$, if $\gamma$ and $\beta$ changes gradually and slowly, the $y_i$ distribution is stable. In this sense, the output of $sigmoid(y_i)$ is more stable, which means, **the $W2, b2$ dont have to readjust too much to compensate the change in the $W1, b1$**.  Although changes in $W1 , \ b1$ will change $x_i$ 's distribution, but $\hat{xi}$ remains the $\mathcal {N}(0,1)$, and $y_i$'s distribution is controlled by $\gamma$ and $\beta$. That means sigmoid1's input and output are quite stable, then $W2, b2$ need not always hugely readjust themselves to adapt another distribution. Think of there are many layers, this actually saves a lot effort. This somewhat seems like there is a barrier to stop the changes in this layer to affect the next layer.
 
-> changes in affine1 -> || -> sigmoid1 -> changes in affine2 -> || -> sigmoid2
+> changes in affine1 -> Barrier -> sigmoid1 -> changes in affine2 -> Barrier -> sigmoid2
 
 ### point 2
 
