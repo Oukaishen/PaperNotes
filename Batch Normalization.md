@@ -133,3 +133,10 @@ $\beta = E[x]$
 
 With this setting, we could recover the original activations, if that were the optimal thing to do.
 
+### point 5
+
+There are a lot of debates on whether the BN should be utilized before or after activation layer(ReLu)? The author of original paper suggests that
+
+> x=Wu+b, u is likely the output of another non-linearity, the shape of its distribution is likely to change during training, and contraining its first and second moments would not eliminat trhe co-variate shift. In contrast, Wu+b is more likely to have a symmetric, non-sparse distribution, that is "more Gaussian"; normalizing it is likely to produce activations with a stable distribution.
+
+Somebody finds that with the BN layer located after the ReLu, the performance increases. However, there is no solid evidence and this remains to be learnd further to explain why.
