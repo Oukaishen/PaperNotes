@@ -2,7 +2,7 @@
 
 created by kaishen, 10 Jun
 
-
+<br>
 
 Also known as "hash trick". The idea behind this name simple: **convert the data into a vector of features. **
 
@@ -26,13 +26,13 @@ Let say:
 
 hash(Hi) = 0, hash(kaishen) = 1, hash(is) = 1, hash(using) = 2, hash(hashing) = 3, hash(trick) = 4,
 
-Then the final vector is (1,2,1,1,1)
+Then the final vector is [1,2,1,1,1]
 
-Notice that we just add 1 to the i-th dimension pf ther vector each time our hash function returns that dimension. Sometimes you can use a 2nd hash function that return {-1, +1} to determine whether it is add or substract.
+Notice that we just add 1 to the i-th dimension of ther vector each time our hash function returns that dimension. Sometimes you can use a 2nd hash function that return {-1, +1} to determine whether it is add or substract.
 
 <br>
 
-There is one advantage for hash trick compared to the "one-hot" method. It is Friendly to online learning method where you can train on a dataset that doesn't fit in memory because you need to see each example only once. One-hot encoding will not work well with online learning beacuse to prepare dictionaries you need to see whole dataset first.
+**[Pro]** There is one advantage for hash trick compared to the "one-hot" method. It is Friendly to online learning method where you can train on a dataset that doesn't fit in memory because you need to see each example only once. One-hot encoding will not work well with online learning beacuse to prepare dictionaries you need to see whole dataset first.
 
-
+**[Con]** feature hashing does not have good interpretation.
 
